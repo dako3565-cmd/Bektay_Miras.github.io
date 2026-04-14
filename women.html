@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Women Collection</title>
+  <link rel="stylesheet" href="Miras.css">
+</head>
+<body id="women"> <header class="header header--solid">
+    <a class="logo" href="index.html">MIRAS BEKTAY</a>
+</header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Women Collection</h2>
+
+        <div class="filter-bar">
+          <div class="filter-item">
+            <span class="filter-label">Сорттау:</span>
+            <select id="sortSelect" class="minimal-select">
+              <option value="default">Әдепкі бойынша</option>
+              <option value="low">Арзаннан қымбатқа</option>
+              <option value="high">Қымбаттан арзанға</option>
+            </select>
+            </div>
+
+            <div class="filter-item">
+              <span class="filter-label">Бағасы:</span>
+              <select id="priceFilter" class="minimal-select">
+                <option value="all">Барлығы</option>
+                <option value="0-100">$100-ға дейін</option>
+                <option value="100-500">$100 - $500</option>
+                <option value="500+">$500-дан жоғары</option>
+              </select>
+            </div>
+          
+            <div class="filter-count">
+              <span id="productCount">0</span> тауар табылды
+            </div>
+          </div>
+
+        <div class="grid" id="products"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" style="padding: 40px 0; border-top: 1px solid var(--line); margin-top: 80px; text-align: center;">
+    <div class="container">
+      <p style="font-family: var(--font); color: var(--muted);">© 2026 MIRAS BEKTAY</p>
+      <div style="margin-top: 15px;">
+        <a href="services.html" style="margin: 0 10px;">Support</a>
+        <a href="https://www.instagram.com/_bektaev___/" style="margin: 0 10px;">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>

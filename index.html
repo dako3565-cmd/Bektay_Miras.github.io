@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIRAS BEKTAY</title>
+  <link rel="stylesheet" href="Miras.css" />
+</head>
+
+<body>
+    <!-- BACKDROP -->
+<div class="backdrop" id="backdrop"></div>
+
+<!-- SIDE MENU -->
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__top">
+    <p class="drawer__title">Menu</p>
+    <button class="drawer__close" id="drawerClose" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="drawer__nav">
+    <a href="men.html" class="drawer__link">Men</a>
+    <a href="women.html" class="drawer__link">Women</a>
+    <a href="watches.html" class="drawer__link">Watches</a>
+    <a href="services.html" class="drawer__link">Services</a>
+  </nav>
+</aside>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <p>Free delivery • Returns within 14 days • Spring–Summer 2026</p>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__left">
+      <button class="icon-btn" id="menuBtn" aria-label="Menu">
+        <span class="burger"></span>
+      </button>
+    
+      <a class="header__link" href="#" id="menuText" style="margin-right: 15px;">Menu</a>
+
+      <div class="search-wrapper">
+        <div class="search-input-group">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          
+            <input type="text" id="searchInput" placeholder="Search..." class="search-input" autocomplete="off">
+          </div>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+</div>
+
+    <a class="logo" href="#">MIRAS BEKTAY</a>
+
+    <div class="header__right">
+      <div id="authBlock" class="auth-wrapper">
+        <a href="login.html" class="header__link">Login</a>
+    </div>
+  
+      <a class="icon-btn" href="cart.html">
+          <img src="https://cdn-icons-png.flaticon.com/128/4549/4549639.png">
+      </a>
+      <a class="icon-btn" href="wishlist.html" aria-label="Wishlist">
+        <img src="img/chosen.png" alt="Wishlist" />
+    </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="hero__bg"></div>
+
+      <div class="container hero__content">
+        <p class="hero__kicker">Men’s Spring–Summer 2026</p>
+        <h1 class="hero__title">The new season essentials</h1>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#section">Shop now</a>
+          <a class="btn btn--ghost" href="#">Explore collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="section" id="section">
+      <div class="container section__head">
+        <h2 class="section__title">Shop by category for mens</h2>
+        <a class="section__link" href="men.html">View all</a>
+      </div>
+
+      <div class="container grid">
+        <a class="card" href="men.html">
+          <div class="card__img">
+              <img src="img/mens shoess.webp" alt="Кроссовки" />
+          </div>
+          <div class="card__meta">
+              <p class="card__title">Shoes</p>
+              <span class="card__arrow">→</span>
+          </div>
+      </a>
+
+
+      <a class="card" href="men.html">
+        <div class="card__img">
+            <img src="img/mens bags.webp" alt="Сумки" />
+        </div>
+        <div class="card__meta">
+            <p class="card__title">Bags</p>
+           <span class="card__arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="men.html">
+        <div class="card__img">
+            <img src="img/mens goods.webp" alt="Кошельки" />
+        </div>
+        <div class="card__meta">
+            <p class="card__title">Goods</p>
+           <span class="card__arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="men.html">
+        <div class="card__img">
+            <img src="img/mens sunglasses.webp" alt="Очки" />
+        </div>
+        <div class="card__meta">
+            <p class="card__title">Sunglasses</p>
+           <span class="card__arrow">→</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="slider-wrapper">
+      <button class="slider-btn prev" id="prevBtn">←</button>
+    
+      <div class="slider-container">
+        <div class="slider" id="mainSlider">
+          <img src="img/men.jpeg" alt="Collection 1">
+          <img src="img/woman.jpeg" alt="Collection 2">
+        </div>
+      </div>
+    
+      <button class="slider-btn next" id="nextBtn">→</button>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="section" id="section">
+      <div class="container section__head">
+        <h2 class="section__title">Shop by category for womens</h2>
+        <a class="section__link" href="women.html">View all</a>
+      </div>
+
+      <div class="container grid">
+        <a class="card" href="women.html">
+          <div class="card__img">
+            <img src="img/womens bag.webp" alt="Сумки" />
+          </div>
+          <div class="card__meta">
+            <p class="card__title">Bags</p>
+            <span class="card__arrow">→</span>
+          </div>
+        </a>
+        
+        <a class="card" href="women.html">
+          <div class="card__img">
+            <img src="img/Cashmere Sweater.jpg" alt="Sweater" />
+          </div>
+          <div class="card__meta">
+            <p class="card__title">Sweater</p>
+            <span class="card__arrow">→</span>
+          </div>
+        </a>
+
+        <a class="card" href="women.html">
+          <div class="card__img">
+            <img src="img/Classic Pumps.jpg" alt="Pumps" />
+          </div>
+          <div class="card__meta">
+            <p class="card__title">Classic Pumps</p>
+            <span class="card__arrow">→</span>
+          </div>
+        </a>
+
+        <a class="card" href="women.html">
+          <div class="card__img">
+            <img src="img/Summer Dress.jpg" alt="Dress" />
+          </div>
+          <div class="card__meta">
+            <p class="card__title">Summer Dress</p>
+            <span class="card__arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FEATURE STRIP -->
+    <section class="strip">
+      <div class="container strip__grid">
+        <div class="strip__item">
+          <p class="strip__title">Delivery</p>
+          <p class="strip__text">Fast shipping and secure packaging</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__title">Quality</p>
+          <p class="strip__text">Premium materials and finishing</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__title">Support</p>
+          <p class="strip__text">We reply within 24 hours</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="padding: 40px 0; border-top: 1px solid var(--line); margin-top: 80px; text-align: center;">
+    <div class="container">
+      <p style="font-family: var(--font); color: var(--muted);">© 2026 MIRAS BEKTAY</p>
+      <div style="margin-top: 15px;">
+        <a href="services.html" style="margin: 0 10px;">Support</a>
+        <a href="https://www.instagram.com/_bektaev___/" style="margin: 0 10px;">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // делаем хедер белым после скролла, как у люксовых сайтов
+    const header = document.getElementById("header");
+    const onScroll = () => {
+      if (window.scrollY > 20) header.classList.add("header--solid");
+      else header.classList.remove("header--solid");
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+  </script>
+  <script>
+    // Drawer menu
+    const menuBtn = document.getElementById("menuBtn");
+    const menuText = document.getElementById("menuText");
+    const drawer = document.getElementById("drawer");
+    const backdrop = document.getElementById("backdrop");
+    const drawerClose = document.getElementById("drawerClose");
+  
+    function openDrawer(){
+      drawer.classList.add("open");
+      backdrop.classList.add("open");
+      drawer.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  
+    function closeDrawer(){
+      drawer.classList.remove("open");
+      backdrop.classList.remove("open");
+      drawer.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  
+    menuBtn.addEventListener("click", (e) => { e.preventDefault(); openDrawer(); });
+    menuText.addEventListener("click", (e) => { e.preventDefault(); openDrawer(); });
+  
+    drawerClose.addEventListener("click", closeDrawer);
+    backdrop.addEventListener("click", closeDrawer);
+  
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeDrawer();
+    });
+  </script>
+  <script src="script.js"></script>
+  <script>
+    const slider = document.getElementById('mainSlider');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+  
+    // Функция для переключения на следующий слайд
+    function showNextSlide() {
+      // Если мы дошли до конца, возвращаемся в начало (scrollLeft = 0)
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+      }
+    }
+  
+    // Запускаем автопереключение каждые 2000 мс (2 секунды)
+    let autoSlide = setInterval(showNextSlide, 2000);
+  
+    // ОСТАНОВКА ПРИ ВЗАИМОДЕЙСТВИИ (чтобы слайдер не прыгал, когда пользователь сам кликает)
+    const stopAuto = () => clearInterval(autoSlide);
+  
+    nextBtn.addEventListener('click', () => {
+      stopAuto();
+      showNextSlide();
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      stopAuto();
+      slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+    });
+  
+    // Остановить автопрокрутку, если пользователь начал скроллить пальцем (на мобилках)
+    slider.addEventListener('touchstart', stopAuto);
+  </script>
+  
+  <script>
+    function updateAuthUI() {
+        const authBlock = document.getElementById('authBlock');
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    
+        if (currentUser) {
+            // Вставляем иконку и скрытое меню
+            authBlock.innerHTML = `
+                <div class="profile-dropdown">
+                    <button class="icon-btn" id="profileBtn" style="min-width: auto;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png" alt="Profile" style="width: 18px; height: 18px;">
+                    </button>
+                    <div class="dropdown-content" id="profileMenu">
+                        <div class="dropdown-info">
+                            <p class="user-label">Account</p>
+                            <p class="user-detail">${currentUser.email}</p>
+                        </div>
+                        <hr>
+                        <button onclick="logout()" class="logout-link">Log Out</button>
+                    </div>
+                </div>
+            `;
+    
+            const btn = document.getElementById('profileBtn');
+            const menu = document.getElementById('profileMenu');
+            
+            // Открытие/закрытие по клику
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('show');
+            });
+    
+            // Закрытие при клике в любое другое место
+            document.addEventListener('click', () => menu.classList.remove('show'));
+        }
+    }
+    
+    function logout() {
+        localStorage.removeItem('currentUser');
+        window.location.reload();
+    }
+    
+    document.addEventListener('DOMContentLoaded', updateAuthUI);
+    </script>
+      <script src="products.js"></script> 
+      <script src="script.js"></script>
+    </script>
+</body>
+</html>

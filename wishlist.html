@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Wishlist | MIRAS BEKTAY</title>
+  <link rel="stylesheet" href="Miras.css">
+</head>
+<body>
+
+  <header class="header header--solid">
+    <a class="logo" href="Index.html">MIRAS BEKTAY</a>
+    <a href="Index.html" class="header__link">Back</a>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h2 class="section__title">My Wishlist</h2>
+      <div class="grid" id="wishlistItems"></div>
+    </div>
+  </main>
+  <footer class="footer" style="padding: 40px 0; border-top: 1px solid var(--line); margin-top: 80px; text-align: center;">
+    <div class="container">
+      <p style="font-family: var(--font); color: var(--muted);">© 2026 MIRAS BEKTAY</p>
+      <div style="margin-top: 15px;">
+        <a href="services.html" style="margin: 0 10px;">Support</a>
+        <a href="https://www.instagram.com/_bektaev___/" style="margin: 0 10px;">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+  <script>
+    function renderWishlist() {
+        // Получаем избранное из памяти (массив ID товаров)
+        const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        const container = document.getElementById("wishlistItems");
+        
+        container.innerHTML = "";
+
+        if (wishlist.length === 0) {
+            container.innerHTML = "<p>Your wishlist is empty.</p>";
+            return;
+        }
+
+        // Фильтруем все товары, находя те, что в списке избранного
+        const favoriteProducts = products.filter(p => wishlist.includes(p.id));
+
+        favoriteProducts.forEach(product => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <a href="product.html?id=${product.id}">
+                  <div class="card__img">
+                      <img src="${product.image}">
+                  </div>
+                </a>
+                <div class="card__meta">
+                    <div>
+                      <p class="card__title">${product.name}</p>
+                      <span>$${product.price}</span>
+                    </div>
+                    <button onclick="removeFromWishlist(${product.id})" style="color:red; font-size:20px;">✕</button>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    function removeFromWishlist(id) {
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        wishlist = wishlist.filter(itemId => itemId !== id);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        renderWishlist();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderWishlist);
+  </script>
+</body>
+</html>
